@@ -1,7 +1,7 @@
 package theory.lecture_1;
 
 /**
- *
+ * This class was created as a demo of a Java program
  */
 public class HelloWorld {
 
