@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!DOCTYPE students SYSTEM "D:\study\st\src\theory\xml\example_1\students.dtd">
+<!-- комментарий располагается вне тегов и вне значений аттрибутов-->
+<students>
+    <student login="MitarAlex7" faculty="mmf">
+        <name>Mitar Alex</name>
+        <telephone>2456474</telephone>
+        <address>
+            <country>Belarus</country>
+            <city>Minsk</city>
+            <street>Kalinovsky 45</street>
+        </address>
+
+        <!-- другие тэги мы не можем добавить пока не изменим dtd -->
+    </student>
+    <student login="Pashkin5" faculty="mmf">
+        <name>Pashkin Alex</name>
+        <telephone>3453789</telephone>
+        <address>
+            <country>Belarus</country>
+            <city>Brest</city>
+            <street>Knorina 56</street>
+        </address>
+    </student>
+</students>
+
+        <!--<description>-->
+        <!--в текстовых блоках нельзя использовать символы <, >, & а также xml должен иметь только один корневой тэг-->
+        <!--</description>-->
+
+
+        <!-- Указатели - ссылки на необходимые символы
+        &lt; — символ <;
+        &gt; — символ >;
+        &amp; — символ &;
+        &apos; — символ апострофа ';
+        &quot; — символ двойной кавычки "
+        -->
+
+        <!-- второй вариант использования символов - заключить их в блок CDATA -->
+        <!--<data><[!CDATA[ 5 < 7 ]]></data>-->

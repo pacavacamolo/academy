@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<memory>
+    <heap>
+        <!-- heap область одна для всех потоков -->
+
+        <young-generation>
+
+            <!-- объект создается в eden, при сборке мусора GC помечает, какие объекты должны остаться, а какие можно удалить.
+                Те, которые должны остаться, GC переносит из eden в survivor1 или survivor2, остальные удаляются.
+                При заполнении survivor1 GC может при сборке мусора переместить объекты в old-generation. -->
+
+            <eden/>
+            <survivor1/>
+            <survivor2/>
+        </young-generation>
+
+        <old-generation>
+            <!-- здесь хранятся долгоживущие объекты, многие из них живут все время, пока приложение работает.-->
+        </old-generation>
+
+        <permanent-generation>
+            <!--  для настройки размера области используются отдельные настройки XX:PermSize=1024m -XX:MaxPermSize=1024m -->
+
+            <!-- в permanent-generation хранятся классы, загруженные с диска с помощью загрузчиков классов.
+                С точки зрения Java это такие же объекты, как и объекты в heap-->
+
+            <string-pool>
+                <!-- здесь хранятся уникальные строки, при создании новой строки JVM сначала проверит, есть ли она в string pool
+                    и если нету - то добавит ее в пул. Это сделано для экономии памяти, нет необходимости хранить одинаковые строки-->
+
+                <!--In JDK 7, interned strings are no longer allocated in the permanent generation of the Java heap,
+                but are instead allocated in the main part of the Java heap (known as the young and old generations),
+                along with the other objects created by the application. This change will result in more data residing in the main Java heap,
+                and less data in the permanent generation, and thus may require heap sizes to be adjusted.
+                Most applications will see only relatively small differences in heap usage due to this change,
+                but larger applications that load many classes or make heavy use of the String.intern() method will see more significant differences. -->
+            </string-pool>
+
+        </permanent-generation>
+    </heap>
+
+    <non-heap>
+
+        <!-- каждый поток имеет свой стэк -->
+        <stack>
+            <!--в стеке хранятся локальные переменные-->
+        </stack>
+        <stack/>
+        <stack/>
+        <stack/>
+    </non-heap>
+</memory>
