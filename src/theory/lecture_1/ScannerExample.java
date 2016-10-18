@@ -10,5 +10,7 @@ public class ScannerExample {
         String text = scanner.nextLine();
 
         System.out.println("Строка, которую Вы ввели: " + text);
+
+        String x = scanner.nextLine();
     }
 }

@@ -1,6 +1,9 @@
 package theory.lecture_2.ex_1_literals;
 
 public class Main {
+    boolean ttt;
+    int rr;
+
     public static void main(String[] args) {
         //целочисленные литералы в 10х 8х 16х, 2x системах счисления
         int x1 = 35;
@@ -11,6 +14,7 @@ public class Main {
         // для больших чисел
         long y1 = 0xffffL;
         long y2 = 1_000_000_000_000_000L;
+        long y3 = 13312112321111L;
 
         //1 бит, 2 в 8 степени значений
         byte z1 = 100;
@@ -21,7 +25,7 @@ public class Main {
         //8 битов, 2 в 64 степени значений
         long z4 = 1_222_212_121_000_000_000L;
 
-        //System.out.println(1 / 0);
+//        System.out.println(1 / 0);
 
         //дробные числа, или с плавающей точкой
         float x = 5.123123f;
@@ -36,12 +40,12 @@ public class Main {
         //В арифметических выражениях автоматически выполняются расширяющие преобразования типа
         // byte -> short -> int -> long -> float -> double
 
-
+//
 //        int xx = (1 + 2) / 2;
 //        System.out.println(xx);
-
-
-//        double xy = (1 + 2) / 2;
+//
+//
+//        double xy = (1.0 + 2) / 2;
 //        System.out.println(xy);
 
 
@@ -51,20 +55,21 @@ public class Main {
 
 
 //        byte bb = 1;
-//        bb = bb + 127;
+//        byte bb2 = 127;
+////        bb = (int) bb + bb2;
 //        bb = -bb;
 
-        boolean bln1 = true;
-        boolean bln2 = false;
+//        boolean bln1 = true;
+//        boolean bln2 = false;
 
         //символьные литералы - отводится 2 байта памяти, но диапазон значений начинается с 0
-        char c1 = 'a';
-        char c2 = '\u0001';
+        char c1 = 98;
+        char c2 = '\u0098';
         char c3 = '\r'; //переход к началу
         char c4 = '\n'; //новая строка
         char c5 = '\t'; //табуляция
 
-//        System.out.println(c1 + 1);
+        System.out.println(c1);
 
 
         String s1 = "111";
