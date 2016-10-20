@@ -5,6 +5,9 @@ package theory.lecture_4;
  */
 public class Man implements Cloneable{
     public int experience = 20;
+
+
+
     public void teach(String... names) {
         System.out.printf("111");
     }
