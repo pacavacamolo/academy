@@ -1,7 +1,7 @@
-package theory.lecture_5;
+package practice.seminar_5;
 
 
-import java.util.ArrayList;
+import java.lang.*;
 import java.util.LinkedList;
 import java.util.List;
 

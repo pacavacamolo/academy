@@ -1,11 +1,11 @@
-package theory.lecture_5;
+package practice.seminar_5;
 
-import java.util.Objects;
+import java.lang.*;
 
 /**
  * Created by StudentTC on 18.10.2016.
  */
-public abstract class Man implements Cloneable, Runnable{
+public abstract class Man implements Cloneable, Runnable {
     protected int experience = 7;
     public int x = 10;
     public int y = 30;

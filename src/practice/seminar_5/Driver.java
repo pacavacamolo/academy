@@ -1,4 +1,4 @@
-package theory.lecture_5;
+package practice.seminar_5;
 
 /**
  * Created by StudentTC on 20.10.2016.
