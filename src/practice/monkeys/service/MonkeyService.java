@@ -1,21 +1,23 @@
 package practice.monkeys.service;
 
-import practice.monkeys.model.BananaMonkey;
-import practice.monkeys.model.Branch;
-import practice.monkeys.model.Calculation;
-import practice.monkeys.model.Fruit;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
+import practice.monkeys.model.Branch;
+import practice.monkeys.model.Calculation;
+import practice.monkeys.model.CocosMonkey;
 
 /**
  * Created by StudentTC on 01.11.2016.
  */
 public class MonkeyService {
+    private static Random random = new Random();
+
     public static void main(String[] args) {
         Branch tree = createTree(FruitType.COCOS.name());
 
-        Calculation monkey = new BananaMonkey();
+        Calculation monkey = new CocosMonkey();
 
         calculate(monkey, tree);
 
@@ -34,7 +36,6 @@ public class MonkeyService {
             Branch child = createTree(new Branch(), type);
             children.add(child);
         }
-
         tree.setBranches(children);
 
         return tree;
@@ -43,20 +44,13 @@ public class MonkeyService {
     public static Branch createTree(Branch tree, String type) {
         List<Branch> children = new ArrayList<>();
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < random.nextInt(9); i++) {
             Branch child = new Branch();
+            child.populateBranch(FruitType.COCOS.name(), 1);
             children.add(child);
         }
-
         tree.setBranches(children);
-
-        List<Fruit> fruits = new ArrayList<>();
-
-        for (int i = 0; i < 10; i++) {
-            fruits.add(new Fruit(type));
-        }
-
-        tree.setFruits(fruits);
+        tree.populateBranch(FruitType.COCOS.name(), 0);
 
         return tree;
     }
@@ -65,5 +59,4 @@ public class MonkeyService {
         COCOS,
         BANANA
     }
-
 }

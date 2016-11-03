@@ -1,7 +1,5 @@
 package theory.lecture_6;
 
-import theory.lecture_5.Runnable;
-
 import java.io.Serializable;
 
 /**
@@ -10,13 +8,6 @@ import java.io.Serializable;
 public class Main {
     public static void main(String[] args) {
         OuterClass.NestedClass nested = OuterClass.getNested();
-
-        Runnable runnable = new Runnable() {
-            @Override
-            public void teach(String... names) {
-
-            }
-        };
 
         OuterClass clazz = new OuterClass();
 //        OuterClass.InnerClass inner = clazz.new InnerClass();
