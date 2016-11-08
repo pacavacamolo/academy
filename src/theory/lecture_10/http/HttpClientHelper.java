@@ -1,4 +1,4 @@
-package theory.http;
+package theory.lecture_10.http;
 
 import java.io.IOException;
 

@@ -16,7 +16,9 @@ public class MyClassLoader extends ClassLoader{
             return super.loadClass(name);
 
 
-        try (FileInputStream fis = new FileInputStream("D:\\study\\st\\out\\production\\st\\theory\\lecture_12\\serialization\\Triangle.class"); ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+        try (FileInputStream fis = new FileInputStream("D:\\study\\st\\out\\production\\st\\theory\\lecture_12\\serialization\\Triangle.class");
+             ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+
             int data = fis.read();
 
             while (data != -1) {
