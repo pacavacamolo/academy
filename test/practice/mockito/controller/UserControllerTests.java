@@ -23,6 +23,9 @@ public class UserControllerTests {
 
     @Mock
     BookingService bookingService;
+//
+//    @Spy
+//    List<String> testList = new ArrayList<>();
 
     @Before
     public void setup() {
@@ -38,6 +41,10 @@ public class UserControllerTests {
         Mockito.verify(userService).getUserBalance(1L);
 
         Mockito.verify(userService, Mockito.times(1)).getUserBalance(1L);
+
+//        Mockito.when(testList.size()).thenReturn(100);
+//        int size = testList.size();
+//        Assert.assertEquals(100, testList.size());
 
     }
 }
