@@ -11,7 +11,9 @@ public class MyThread extends Thread {
     public void run() {
         synchronized (service) {
             for (int i = 0; i < 100000; i++) {
+
                 service.increment();
+
             }
             service.notify();
         }

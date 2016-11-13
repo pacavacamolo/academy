@@ -13,7 +13,7 @@ public class Main {
 
         synchronized (service) {
             System.out.println("главный поток ждет");
-            service.wait(1);
+            service.wait(500);
             System.out.println("thread1 занял монитор объекта service и мы увидим эту строку только когда монитор освободится");
         }
         System.out.println(service.getCounter());

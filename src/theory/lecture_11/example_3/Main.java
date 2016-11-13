@@ -15,7 +15,7 @@ public class Main {
         synchronized (service) {
             System.out.println("main thread waiting for notify...");
             service.wait();
+            System.out.println(service.getCounter());
         }
-        System.out.println(service.getCounter());
     }
 }

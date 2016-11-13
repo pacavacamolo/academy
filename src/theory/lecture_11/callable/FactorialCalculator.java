@@ -1,7 +1,6 @@
-package theory.callable;
+package theory.lecture_11.callable;
 
 import java.util.concurrent.Callable;
-import java.util.concurrent.TimeUnit;
 
 class FactorialCalculator implements Callable<Integer>
 {
@@ -18,7 +17,7 @@ class FactorialCalculator implements Callable<Integer>
         if (number != 0 && number != 1) {
             for (int i = 2; i <= number; i++) {
                 result *= i;
-                TimeUnit.MILLISECONDS.sleep(500);
+                Thread.sleep(500);
             }
         } else {
             result = number;

@@ -3,13 +3,14 @@ package theory.lecture_11.example_4;
 public class MyThread extends Thread {
     final Service service;
 
+
     public MyThread(Service service) {
         this.service = service;
     }
 
     @Override
     public void run() {
-        synchronized (service) {
+//        synchronized (service) {
             for (int i = 0; i < 1000; i++) {
                 service.increment();
             }
@@ -18,6 +19,6 @@ public class MyThread extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }
+//        }
     }
 }
