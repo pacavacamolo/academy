@@ -1,9 +1,9 @@
 package theory.lecture_14.properties;
 
-import java.util.Properties;
-
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.Properties;
 
 
 public class PropertiesServiceTests {

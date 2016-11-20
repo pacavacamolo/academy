@@ -20,7 +20,7 @@ public class Example_1 {
 
         Date date = new Date();
 
-        DateFormat df = DateFormat.getDateInstance(DateFormat.FULL, l1);
+        DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT, l1);
         System.out.println(df.format(date));
 
     }
