@@ -4,30 +4,28 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class JDBC {
-    public static void main(String[] argv) {
-
-        System.out.println("-------- MySQL JDBC Connection Testing ------------");
+public class JDBCFactory {
+    public static Connection getConnection() {
+        Connection connection = null;
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             System.out.println("Where is your MySQL JDBC Driver?");
             e.printStackTrace();
-            return;
+            return null;
         }
 
         System.out.println("MySQL JDBC Driver Registered!");
-        Connection connection = null;
 
         try {
             connection = DriverManager
-                    .getConnection("jdbc:mysql://localhost:3306/mkyongcom","root", "password");
+                    .getConnection("jdbc:mysql://localhost:3306/users","root", "olala");
 
         } catch (SQLException e) {
             System.out.println("Connection Failed! Check output console");
             e.printStackTrace();
-            return;
+            return null;
         }
 
         if (connection != null) {
@@ -35,5 +33,6 @@ public class JDBC {
         } else {
             System.out.println("Failed to make connection!");
         }
+        return connection;
     }
 }
