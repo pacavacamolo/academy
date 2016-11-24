@@ -10,13 +10,13 @@
         </layout>
     </appender>
 
-    <!--<appender name="file" class="org.apache.log4j.RollingFileAppender">-->
-        <!--<param name="append" value="false" />-->
-        <!--<param name="maxFileSize" value="10MB" />-->
-        <!--<param name="maxBackupIndex" value="10" />-->
-        <!--<param name="file" value="E:/log.txt" />-->
+    <!--<appender getName="file" class="org.apache.log4j.RollingFileAppender">-->
+        <!--<param getName="append" value="false" />-->
+        <!--<param getName="maxFileSize" value="10MB" />-->
+        <!--<param getName="maxBackupIndex" value="10" />-->
+        <!--<param getName="file" value="E:/log.txt" />-->
         <!--<layout class="org.apache.log4j.PatternLayout">-->
-            <!--<param name="ConversionPattern"-->
+            <!--<param getName="ConversionPattern"-->
                    <!--value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />-->
         <!--</layout>-->
     <!--</appender>-->

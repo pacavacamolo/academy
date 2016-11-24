@@ -69,6 +69,6 @@ public class Main {
         } catch (IOException e) {
             logger.error(e.getMessage());
         }
-        System.out.format("total price is %f", total);
+        System.out.format("total getPrice is %f", total);
     }
 }
